@@ -46,7 +46,7 @@
         }
 
         &::before {
-          @apply h-full w-1 rounded-lg bg-red-500 absolute -left-7 top-0 -translate-x-1 opacity-0 transition-opacity transition-transform duration-500
+          @apply h-full w-1 rounded-lg bg-red-500 absolute -left-7 top-0 -translate-x-1 opacity-0 transition-opacity transition-transform duration-500;
           content: "";
         }
 

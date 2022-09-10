@@ -1,5 +1,5 @@
 import { IMenuItem } from "@/components/layout/sidebar/menu/menu.interface";
-import { HiChartBar, HiCollection, HiHome, HiStar } from "react-icons/all";
+import { HiChartBar, HiCollection, HiHome, HiStar } from "react-icons/hi";
 
 export const menu: IMenuItem[] = [
     {
@@ -15,7 +15,7 @@ export const menu: IMenuItem[] = [
     {
         title: "My Channel",
         icon: HiStar,
-        link: "/"
+        link: "/my-channel"
     },
     {
         title: "Subscriptions",
