@@ -1,11 +1,14 @@
 import { FunctionComponent, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { FaUserCircle } from "react-icons/fa";
+import Field from "@/components/ui/field/Field";
+import Button from "@/components/ui/button/Button";
 import styles from "./AuthForm.module.scss";
 import stylesIcon from "../icons-right/IconsRight.module.scss";
 import { useOutside } from "../../../../../hooks/useOutside";
 import { useAuth } from "../../../../../hooks/useAuth";
 import { IAuthFields } from "@/components/layout/header/auth-form/auth-form.interface";
-import { FaUserCircle } from "react-icons/fa";
+import { validEmail } from "@/components/layout/header/auth-form/auth.valid";
 
 const AuthForm: FunctionComponent = () => {
     const { ref, isShow, setIsShow } = useOutside(false);
@@ -29,6 +32,41 @@ const AuthForm: FunctionComponent = () => {
 
             {isShow && (
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+                    <Field
+                        {...register("email", {
+                            required: "E-mail is required!",
+                            pattern: {
+                                value: validEmail,
+                                message: "Invalid e-mail address!"
+                            }
+                        })}
+                        placeholder="E-mail"
+                        error={errors.email}
+                    />
+                    <Field
+                        {...register("password", {
+                            required: "Password is required!",
+                            minLength: {
+                                value: 6,
+                                message: "At least 6 characters required!"
+                            }
+                        })}
+                        placeholder="Password"
+                        error={errors.password}
+                        type="password"
+                    />
+
+                    <div className="mt-5 mb-1 text-center">
+                        <Button onClick={() => setType("login")}>
+                            Login
+                        </Button>
+                    </div>
+                    <button
+                        className={styles.register}
+                        onClick={() => setType("register")}
+                    >
+                        Register
+                    </button>
 
                 </form>
             )}
