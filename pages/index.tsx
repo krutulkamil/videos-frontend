@@ -1,12 +1,10 @@
-import type { NextPage } from "next";
 import Home from "@/components/pages/home/Home";
+import { NextPageAuth } from '@/providers/private-route.interface';
 
-const HomePage: NextPage = () => {
+const HomePage: NextPageAuth = () => {
     return (
         <Home />
     );
 };
-
-
 
 export default HomePage;
