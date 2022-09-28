@@ -1,15 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IAuthInitialState } from "@/store/auth/auth.interface";
-import { register } from "./auth.actions";
+import { createSlice } from '@reduxjs/toolkit';
+import { IAuthInitialState } from '@/store/auth/auth.interface';
+import { register } from './auth.actions';
+import { login } from './auth.actions';
+import { logout } from './auth.actions';
 
 const initialState: IAuthInitialState = {
     user: null,
-    accessToken: "",
+    accessToken: '',
     isLoading: false
 };
 
 export const authSlice = createSlice({
-    name: "auth",
+    name: 'auth',
     initialState,
     reducers: {},
     extraReducers: builder => {
@@ -25,7 +27,25 @@ export const authSlice = createSlice({
             .addCase(register.rejected, state => {
                 state.isLoading = false;
                 state.user = null;
-                state.accessToken = "";
-            });
+                state.accessToken = '';
+            })
+            .addCase(login.pending, state => {
+                state.isLoading = true;
+            })
+            .addCase(login.fulfilled, (state, { payload }) => {
+                state.isLoading = false;
+                state.user = payload.user;
+                state.accessToken = payload.accessToken;
+            })
+            .addCase(login.rejected, state => {
+                state.isLoading = false;
+                state.user = null;
+                state.accessToken = '';
+            })
+            .addCase(logout.fulfilled, state => {
+                state.isLoading = false;
+                state.user = null;
+                state.accessToken = '';
+            })
     }
 });
