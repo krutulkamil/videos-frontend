@@ -3,6 +3,8 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore, persis
 import storage from 'redux-persist/lib/storage';
 import { rootReducer } from '@/store/root-reducer';
 import { configureStore } from '@reduxjs/toolkit';
+import { rtkQueryErrorLogger } from '@/store/middlewares/error.middleware';
+import { api } from '@/store/api/api';
 
 const persistConfig = {
     key: 'root',
@@ -10,7 +12,7 @@ const persistConfig = {
     whitelist: ['auth']
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
@@ -19,6 +21,8 @@ export const store = configureStore({
             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
         }
     })
+        .concat(rtkQueryErrorLogger)
+        .concat(api.middleware)
 });
 
 export const persistor = persistStore(store);

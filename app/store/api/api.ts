@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { API_URL } from '../../api/axios';
 import { TypeRootState } from '@/store/store';
 import { IUser } from '@/types/user.interface';
@@ -18,7 +18,7 @@ export const api = createApi({
         }
     }),
     endpoints: builder => ({
-        getProfile: builder.query<IUser, any>({
+        getProfile: builder.query<IUser, null>({
             query: () => `${USER}/profile`,
             providesTags: () => [{ type: 'Profile' }]
         })
