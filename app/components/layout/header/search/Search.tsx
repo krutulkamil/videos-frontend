@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import styles from './Search.module.scss';
 import { useSearch } from '@/components/layout/header/search/useSearch';
+import VideoItem from '@/components/ui/video-item/VideoItem';
 
 const Search: FunctionComponent = () => {
     const { data, handleSearch, searchTerm, isSuccess } = useSearch();
@@ -19,8 +20,7 @@ const Search: FunctionComponent = () => {
             {isSuccess && (
                 <div className={styles.result}>
                     {data?.length ? (
-                        data.map(video => <div>{video.name}</div>)
-                        // data.map(video => <VideoItem isSmall item={video} key={video.id}/>)
+                        data.map(video => <VideoItem isSmall item={video} key={video.id}/>)
                     ) : (
                         <div className="text-white">Didn't find videos.</div>
                     )}
