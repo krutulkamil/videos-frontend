@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import styles from "./Search.module.scss";
+import { FunctionComponent } from 'react';
+import styles from './Search.module.scss';
 
 const Search: FunctionComponent = () => {
     return (

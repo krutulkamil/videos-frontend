@@ -1,12 +1,12 @@
-import { FunctionComponent } from "react";
-import MenuItem from "@/components/layout/sidebar/menu/MenuItem";
-import Line from "@/components/ui/Line";
-import styles from "./Menu.module.scss";
-import { IMenuItem } from "@/components/layout/sidebar/menu/menu.interface";
+import { FunctionComponent } from 'react';
+import MenuItem from '@/components/layout/sidebar/menu/MenuItem';
+import Line from '@/components/ui/Line';
+import styles from './Menu.module.scss';
+import { IMenuItem } from '@/components/layout/sidebar/menu/menu.interface';
 
 interface IMenu {
     title: string;
-    items: IMenuItem[]
+    items: IMenuItem[];
 }
 
 const Menu: FunctionComponent<IMenu> = ({ title, items }) => {
@@ -15,12 +15,12 @@ const Menu: FunctionComponent<IMenu> = ({ title, items }) => {
             <h3>{title}</h3>
             <ul>
                 {items.map(menuItem => (
-                    <MenuItem item={menuItem} key={menuItem.link} />
+                    <MenuItem item={menuItem} key={menuItem.link}/>
                 ))}
             </ul>
-            <Line />
+            <Line/>
         </nav>
-    )
+    );
 };
 
 export default Menu;

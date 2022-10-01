@@ -1,6 +1,6 @@
-import { IBase } from "@/types/base.interface";
-import { IUser } from "./user.interface";
-import { IComment } from "./comment.interface";
+import { IBase } from '@/types/base.interface';
+import { IUser } from './user.interface';
+import { IComment } from './comment.interface';
 
 export interface IVideo extends IBase {
     name: string;
@@ -16,5 +16,5 @@ export interface IVideo extends IBase {
 }
 
 export interface IVideoDto extends Pick<IVideo,
-    "id" | "thumbnailPath" | "description" | "name" | "videoPath" | "isPublic"> {
+    'id' | 'thumbnailPath' | 'description' | 'name' | 'videoPath' | 'isPublic'> {
 }

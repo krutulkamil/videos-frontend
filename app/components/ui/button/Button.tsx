@@ -1,7 +1,7 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import cn from "classnames";
-import styles from "./Button.module.scss";
-import { IButton } from "./button.interface";
+import { FunctionComponent, PropsWithChildren } from 'react';
+import cn from 'classnames';
+import styles from './Button.module.scss';
+import { IButton } from './button.interface';
 
 const Button: FunctionComponent<PropsWithChildren<IButton>> = ({ children, className, ...rest }) => {
     return (

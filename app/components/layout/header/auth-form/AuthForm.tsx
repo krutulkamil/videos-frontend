@@ -5,11 +5,11 @@ import Field from '@/components/ui/field/Field';
 import Button from '@/components/ui/button/Button';
 import styles from './AuthForm.module.scss';
 import stylesIcon from '../icons-right/IconsRight.module.scss';
-import { useOutside } from '../../../../../hooks/useOutside';
-import { useAuth } from '../../../../../hooks/useAuth';
+import { useOutside } from '@/hooks/useOutside';
+import { useAuth } from '@/hooks/useAuth';
 import { IAuthFields } from '@/components/layout/header/auth-form/auth-form.interface';
 import { validEmail } from '@/components/layout/header/auth-form/auth.valid';
-import { useActions } from '../../../../../hooks/useActions';
+import { useActions } from '@/hooks/useActions';
 
 const AuthForm: FunctionComponent = () => {
     const { ref, isShow, setIsShow } = useOutside(false);

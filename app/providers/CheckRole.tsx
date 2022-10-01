@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import { TypeComponentAuthFields } from '@/providers/private-route.interface';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 
 const CheckRole: FC<PropsWithChildren<TypeComponentAuthFields>> = ({ children, Component: { isOnlyUser } }) => {
@@ -11,9 +11,9 @@ const CheckRole: FC<PropsWithChildren<TypeComponentAuthFields>> = ({ children, C
 
     if (isLoading) return null;
 
-    if (user) return <Children />;
+    if (user) return <Children/>;
 
-    if (isOnlyUser) pathname !== "/" && replace('/')
+    if (isOnlyUser) pathname !== '/' && replace('/');
 
     return null;
 };

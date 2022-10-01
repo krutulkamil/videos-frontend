@@ -1,9 +1,9 @@
-import { FunctionComponent } from "react";
-import styles from "./IconsRight.module.scss";
-import { useAuth } from "../../../../../hooks/useAuth";
-import ProfileMenu from "@/components/layout/header/profile-menu/ProfileMenu";
-import UploadVideo from "@/components/layout/header/upload-video/UploadVideo";
-import AuthForm from "@/components/layout/header/auth-form/AuthForm";
+import { FunctionComponent } from 'react';
+import styles from './IconsRight.module.scss';
+import { useAuth } from '@/hooks/useAuth';
+import ProfileMenu from '@/components/layout/header/profile-menu/ProfileMenu';
+import UploadVideo from '@/components/layout/header/upload-video/UploadVideo';
+import AuthForm from '@/components/layout/header/auth-form/AuthForm';
 
 const IconsRight: FunctionComponent = () => {
     const { user } = useAuth();
@@ -12,11 +12,11 @@ const IconsRight: FunctionComponent = () => {
         <div className={styles.icons}>
             {user ? (
                 <>
-                    <ProfileMenu />
-                    <UploadVideo />
+                    <ProfileMenu/>
+                    <UploadVideo/>
                 </>
             ) : (
-                <AuthForm />
+                <AuthForm/>
             )}
         </div>
     );

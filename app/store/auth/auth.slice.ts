@@ -46,6 +46,6 @@ export const authSlice = createSlice({
                 state.isLoading = false;
                 state.user = null;
                 state.accessToken = '';
-            })
+            });
     }
 });

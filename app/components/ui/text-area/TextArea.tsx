@@ -1,11 +1,11 @@
-import { forwardRef } from "react";
-import styles from "./TextArea.module.scss";
-import { ITextArea } from "@/components/ui/text-area/text-area.interface";
+import { forwardRef } from 'react';
+import styles from './TextArea.module.scss';
+import { ITextArea } from '@/components/ui/text-area/text-area.interface';
 
 const TextArea = forwardRef<HTMLTextAreaElement, ITextArea>(
     ({ error, style, ...rest }, ref) => {
         return (
-            <div className={styles["editor"]} style={style}>
+            <div className={styles['editor']} style={style}>
                 <textarea ref={ref} {...rest}>
                     {error && <div className={styles.error}>{error.message}</div>}
                 </textarea>
@@ -14,6 +14,6 @@ const TextArea = forwardRef<HTMLTextAreaElement, ITextArea>(
     }
 );
 
-TextArea.displayName = "TextArea";
+TextArea.displayName = 'TextArea';
 
 export default TextArea;

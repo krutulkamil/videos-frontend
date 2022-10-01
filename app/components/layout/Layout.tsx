@@ -1,8 +1,8 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import Head from "next/head";
-import Header from "@/components/layout/header/Header";
-import Sidebar from "@/components/layout/sidebar/Sidebar";
-import styles from "./Layout.module.scss";
+import { FunctionComponent, PropsWithChildren } from 'react';
+import Head from 'next/head';
+import Header from '@/components/layout/header/Header';
+import Sidebar from '@/components/layout/sidebar/Sidebar';
+import styles from './Layout.module.scss';
 
 const Layout: FunctionComponent<PropsWithChildren<{ title: string }>> = ({ title, children }) => {
     return (
@@ -11,9 +11,9 @@ const Layout: FunctionComponent<PropsWithChildren<{ title: string }>> = ({ title
                 <title>{title}</title>
             </Head>
             <main className={styles.main}>
-                <Sidebar />
+                <Sidebar/>
                 <section className={styles.content}>
-                    <Header />
+                    <Header/>
                     <div className={styles.wrapper}>
                         {children}
                     </div>

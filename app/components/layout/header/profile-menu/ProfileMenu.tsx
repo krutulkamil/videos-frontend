@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
 import styles from './ProfileMenu.module.scss';
-import { useAuth } from '../../../../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { api } from '@/store/api/api';
-import { useOutside } from '../../../../../hooks/useOutside';
-import { useActions } from '../../../../../hooks/useActions';
+import { useOutside } from '@/hooks/useOutside';
+import { useActions } from '@/hooks/useActions';
 import { GoChevronDown, GoChevronUp } from 'react-icons/go';
 import Link from 'next/link';
 

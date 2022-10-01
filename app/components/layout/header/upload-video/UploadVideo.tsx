@@ -19,9 +19,9 @@ const UploadVideo: FunctionComponent = () => {
                     createVideo()
                         .unwrap()
                         .then(id => {
-                        setVideoId(+id);
-                        setIsOpen(true);
-                    })
+                            setVideoId(+id);
+                            setIsOpen(true);
+                        });
                 }}
             >
                 <HiUpload/>

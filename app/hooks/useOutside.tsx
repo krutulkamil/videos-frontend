@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction, useState, useEffect, useRef } from 'react';
 
 type TypeOut = {
     ref: any;
@@ -17,11 +17,11 @@ export const useOutside = (initialIsVisible: boolean): TypeOut => {
     };
 
     useEffect(() => {
-        document.addEventListener("click", handleClickOutside, true);
+        document.addEventListener('click', handleClickOutside, true);
         return () => {
-            document.removeEventListener("click", handleClickOutside, true)
-        }
-    })
+            document.removeEventListener('click', handleClickOutside, true);
+        };
+    });
 
     return { ref, isShow, setIsShow };
 };

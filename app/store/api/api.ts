@@ -27,7 +27,7 @@ export const api = createApi({
                 url: `${USER}/subscribe/${channelId}`,
                 method: 'PATCH'
             }),
-            invalidatesTags: () => [{type: 'Profile'}]
+            invalidatesTags: () => [{ type: 'Profile' }]
         })
     })
 });

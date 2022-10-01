@@ -1,5 +1,5 @@
-import { InputHTMLAttributes } from "react";
-import { FieldError } from "react-hook-form";
+import { InputHTMLAttributes } from 'react';
+import { FieldError } from 'react-hook-form';
 
 export interface IFieldProps {
     error?: FieldError;

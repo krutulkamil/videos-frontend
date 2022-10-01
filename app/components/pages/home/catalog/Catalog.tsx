@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import styles from "./Catalog.module.scss";
+import { FunctionComponent } from 'react';
+import styles from './Catalog.module.scss';
 
 const Catalog: FunctionComponent = () => {
     return (

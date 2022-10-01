@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import styles from "./Discover.module.scss";
+import { FunctionComponent } from 'react';
+import styles from './Discover.module.scss';
 
 const Discover: FunctionComponent = () => {
     return (

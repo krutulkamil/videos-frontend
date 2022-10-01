@@ -1,7 +1,7 @@
-import { axiosClassic } from "../../api/axios";
-import { IAuthData } from "./auth.helper";
+import { axiosClassic } from '../../api/axios';
+import { IAuthData } from './auth.helper';
 
-const AUTH = "auth"
+const AUTH = 'auth';
 
 export const AuthService = {
     async login(email: string, password: string) {
@@ -19,4 +19,4 @@ export const AuthService = {
 
         return response.data;
     }
-}
+};

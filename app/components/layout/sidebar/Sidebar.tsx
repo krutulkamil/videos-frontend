@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
-import Link from "next/link";
-import Menu from "@/components/layout/sidebar/menu/Menu";
-import styles from "./Sidebar.module.scss";
-import { menu } from "@/components/layout/sidebar/menu/menu.data";
+import { FunctionComponent } from 'react';
+import Link from 'next/link';
+import Menu from '@/components/layout/sidebar/menu/Menu';
+import styles from './Sidebar.module.scss';
+import { menu } from '@/components/layout/sidebar/menu/menu.data';
 
 const Sidebar: FunctionComponent = () => {
     // TODO: get profile
@@ -15,7 +15,7 @@ const Sidebar: FunctionComponent = () => {
                 </a>
             </Link>
 
-            <Menu title="Menu" items={menu} />
+            <Menu title="Menu" items={menu}/>
 
             <div className={styles.copy}>
                 © 2022 VIDEOS 1.0 for learning purposes.

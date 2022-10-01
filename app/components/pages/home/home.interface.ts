@@ -1,4 +1,4 @@
-import { IVideo } from "@/types/video.interface";
+import { IVideo } from '@/types/video.interface';
 
 export interface IHome {
     randomVideo: IVideo;

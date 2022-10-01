@@ -1,6 +1,6 @@
-import { IBase } from "@/types/base.interface";
-import { IVideo } from "@/types/video.interface";
-import { ISubscription } from "@/types/subscription.interface";
+import { IBase } from '@/types/base.interface';
+import { IVideo } from '@/types/video.interface';
+import { ISubscription } from '@/types/subscription.interface';
 
 export interface IUser extends IBase {
     email: string;

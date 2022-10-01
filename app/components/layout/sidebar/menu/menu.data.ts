@@ -1,25 +1,25 @@
-import { IMenuItem } from "@/components/layout/sidebar/menu/menu.interface";
-import { HiChartBar, HiCollection, HiHome, HiStar } from "react-icons/hi";
+import { IMenuItem } from '@/components/layout/sidebar/menu/menu.interface';
+import { HiChartBar, HiCollection, HiHome, HiStar } from 'react-icons/hi';
 
 export const menu: IMenuItem[] = [
     {
-        title: "Home Page",
+        title: 'Home Page',
         icon: HiHome,
-        link: "/"
+        link: '/'
     },
     {
-        title: "Trending",
+        title: 'Trending',
         icon: HiChartBar,
-        link: "/trending"
+        link: '/trending'
     },
     {
-        title: "My Channel",
+        title: 'My Channel',
         icon: HiStar,
-        link: "/my-channel"
+        link: '/my-channel'
     },
     {
-        title: "Subscriptions",
+        title: 'Subscriptions',
         icon: HiCollection,
-        link: "/subscriptions"
-    },
+        link: '/subscriptions'
+    }
 ];
