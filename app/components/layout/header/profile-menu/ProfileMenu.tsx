@@ -12,8 +12,6 @@ const ProfileMenu: FunctionComponent = () => {
 
     if (isLoading) return null;
 
-    console.log(data);
-
     return (
         <div>{data?.name}</div>
     );
