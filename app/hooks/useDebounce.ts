@@ -10,7 +10,7 @@ export const useDebounce = <T>(value: T, delay: number): T => {
 
         return () => {
             clearTimeout(handler);
-        }
+        };
     }, [value, delay]);
 
     return debouncedValue;
