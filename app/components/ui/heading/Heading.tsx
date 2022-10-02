@@ -1,0 +1,16 @@
+import { FunctionComponent } from 'react';
+import styles from './Heading.module.scss';
+
+interface IHeading {
+    title: string
+}
+
+const Heading: FunctionComponent<IHeading> = ({ title }) => {
+    return (
+        <div className={styles.title}>
+            <h2>{title}</h2>
+        </div>
+    );
+};
+
+export default Heading;
