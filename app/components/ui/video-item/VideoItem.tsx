@@ -44,6 +44,7 @@ const VideoItem: FunctionComponent<IVideoItem> = ({ item, isSmall, removeHandler
                         width={185}
                         height={103}
                         layout='responsive'
+                        priority
                     />
                 )}
                 <VideoDuration duration={item.duration}/>
