@@ -7,7 +7,7 @@ import { IHome } from '@/components/pages/home/home.interface';
 const Home: FunctionComponent<IHome> = ({ randomVideo, newVideos, topVideo }) => {
     return (
         <Layout title="Videos | Home Page">
-            <Discover/>
+            <Discover topVideo={topVideo} randomVideo={randomVideo}/>
             <Catalog/>
         </Layout>
     );
