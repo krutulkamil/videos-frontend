@@ -8,7 +8,7 @@ const Home: FunctionComponent<IHome> = ({ randomVideo, newVideos, topVideo }) =>
     return (
         <Layout title="Videos | Home Page">
             <Discover topVideo={topVideo} randomVideo={randomVideo}/>
-            <Catalog/>
+            <Catalog newVideos={newVideos}/>
         </Layout>
     );
 };

@@ -37,7 +37,7 @@ const VideoItem: FunctionComponent<IVideoItem> = ({ item, isSmall, removeHandler
             )}
 
             <div className={styles.thumbnail}>
-                {item.thumbnailPath && (
+                {item?.thumbnailPath && (
                     <Image
                         src={item.thumbnailPath}
                         alt={item.name}
